@@ -49,3 +49,26 @@ function sum_char_codes3(n: string): number {
     return sum;
 }
 
+
+// O(N^2) Example:
+function sum_char_codes4(n: string): number {
+    let sum = 0;
+    
+    for (let i=0; i < n.length; ++i) {
+        const charCode=n.charCodeAt(i);
+        for (let j=0; j < n.length; ++j) {
+            sum += charCode;
+            // for loop inside of for loop so O(N*N) == O(N^2)
+        }
+    }
+    return sum;
+}
+
+// O(nlogn) Example:
+// Quicksort (will implement and take note on)
+
+// O(log n) Example:
+// Binary search Trees
+
+// Craziest of all runtimes we will go over once
+// O(sqrt(n)) Example:
